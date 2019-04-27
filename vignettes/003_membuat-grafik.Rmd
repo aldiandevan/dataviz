@@ -332,26 +332,3 @@ gdp_id %>%
   select(population:other_service) %>% cor(use = "pairwise.complete.obs") %>% 
   corrplot()
 ```
-
-### Waffle plot
-
-```{r}
-library(waffle)
-savings <- c(
-  `Mortgage\n($84,911)` = 84911, `Auto and\ntuition loans\n($14,414)` = 14414,
-  `Home equity loans\n($10,062)` = 10062, `Credit Cards\n($8,565)` = 8565
-)
-waffle(
-  savings / 392, rows = 7, size = 0.5, legend_pos = "bottom",
-  colors = c("#c7d4b6", "#a3aabd", "#a0d0de", "#97b5cf")
-)
-```
-
-### Heat Map
-```{r}
-airquality %>% 
-  ggplot(aes(x = Day, y = Month, fill = Temp)) +
-  geom_tile() +
-  scale_fill_gradient(low = "blue", high = "red")
-```
-

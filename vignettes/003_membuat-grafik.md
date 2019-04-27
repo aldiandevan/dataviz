@@ -936,30 +936,3 @@ gdp_id %>%
 ```
 
 <img src="003_membuat-grafik_files/figure-gfm/unnamed-chunk-27-1.png" style="display: block; margin: auto;" />
-
-### Waffle plot
-
-``` r
-library(waffle)
-savings <- c(
-  `Mortgage\n($84,911)` = 84911, `Auto and\ntuition loans\n($14,414)` = 14414,
-  `Home equity loans\n($10,062)` = 10062, `Credit Cards\n($8,565)` = 8565
-)
-waffle(
-  savings / 392, rows = 7, size = 0.5, legend_pos = "bottom",
-  colors = c("#c7d4b6", "#a3aabd", "#a0d0de", "#97b5cf")
-)
-```
-
-<img src="003_membuat-grafik_files/figure-gfm/unnamed-chunk-28-1.png" style="display: block; margin: auto;" />
-
-### Heat Map
-
-``` r
-airquality %>% 
-  ggplot(aes(x = Day, y = Month, fill = Temp)) +
-  geom_tile() +
-  scale_fill_gradient(low = "blue", high = "red")
-```
-
-<img src="003_membuat-grafik_files/figure-gfm/unnamed-chunk-29-1.png" style="display: block; margin: auto;" />
