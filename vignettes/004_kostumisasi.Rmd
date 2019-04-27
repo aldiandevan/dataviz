@@ -38,7 +38,7 @@ Dengan menggunakan dataset household_access, buatlah *scatterplot* dengan nama p
 ```{r plot-household1}
 plot_household <- 
   household_access %>% 
-  ggplot(aes(x = electricity_total, y = safe_sanitation, size = safe_water, colour = year)) +
+  ggplot(aes(x = electricity_total, y = safe_sanitation, size = year, colour = province)) +
   geom_point()
 plot_household
 ```
